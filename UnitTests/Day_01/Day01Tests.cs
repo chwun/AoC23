@@ -1,12 +1,11 @@
 using Day_01;
-using FluentAssertions;
+using UnitTests;
 
 namespace _01.Tests.Day_01;
 
-public class Day_01Tests
+public class Day01Tests : TestBase
 {
-    [Fact]
-    public void Part1Sample()
+    public override void Part1Sample()
     {
         List<string> input = new()
         {
@@ -15,15 +14,14 @@ public class Day_01Tests
             "a1b2c3d4e5f",
             "treb7uchet"
         };
-        Solver sut = new();
+        Day01Solver sut = new();
 
-        int result = Solver.SolvePart1(input);
+        int result = sut.SolvePart1(input);
 
         result.Should().Be(142);
     }
 
-    [Fact]
-    public void Part2Sample()
+    public override void Part2Sample()
     {
         List<string> input = new()
         {
@@ -35,7 +33,7 @@ public class Day_01Tests
             "zoneight234",
             "7pqrstsixteen"
         };
-        Solver sut = new();
+        Day01Solver sut = new();
 
         int result = sut.SolvePart2(input);
 

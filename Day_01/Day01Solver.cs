@@ -1,6 +1,8 @@
-﻿namespace Day_01;
+﻿using Base;
 
-public class Solver
+namespace Day_01;
+
+public class Day01Solver : SolverBase
 {
     private Dictionary<string, int> textToDigits = new()
     {
@@ -24,14 +26,14 @@ public class Solver
         ["9"] = 9,
     };
 
-    public static int SolvePart1(IEnumerable<string> lines)
+    public override int SolvePart1(IEnumerable<string> lines)
     {
         return lines
             .Select(l => string.Join("", l.First(char.IsDigit), l.Last(char.IsDigit)))
             .Sum(int.Parse);
     }
 
-    public int SolvePart2(IEnumerable<string> lines)
+    public override int SolvePart2(IEnumerable<string> lines)
     {
         int sum = 0;
 
