@@ -1,9 +1,9 @@
 using Day_01;
 using FluentAssertions;
 
-namespace UnitTests;
+namespace _01.Tests.Day_01;
 
-public class Day01Tests
+public class Day_01Tests
 {
     [Fact]
     public void Part1Sample()
