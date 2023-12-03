@@ -1,7 +1,6 @@
 using Day_01;
-using UnitTests;
 
-namespace _01.Tests.Day_01;
+namespace UnitTests;
 
 public class Day01Tests : TestBase
 {
