@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Diagnostics;
+using System.Numerics;
 
 namespace Base;
 
@@ -8,11 +9,16 @@ public abstract class SolverBaseBig
     {
         string[] lines = File.ReadAllLines("input.txt");
 
-        BigInteger part1 = SolvePart1(lines);
-        Console.WriteLine($"part 1: {part1}");
+        Stopwatch sw = Stopwatch.StartNew();
 
+        BigInteger part1 = SolvePart1(lines);
+        sw.Stop();
+        Console.WriteLine($"part 1: {part1} (took {sw.ElapsedMilliseconds:N0} ms)");
+
+        sw.Restart();
         BigInteger part2 = SolvePart2(lines);
-        Console.WriteLine($"part 2: {part2}");
+        sw.Stop();
+        Console.WriteLine($"part 2: {part2} (took {sw.ElapsedMilliseconds:N0} ms)");
     }
 
     public abstract BigInteger SolvePart1(IEnumerable<string> lines);
