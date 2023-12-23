@@ -33,6 +33,6 @@ public class Day08Tests : TestBase
 
         BigInteger result = sut.SolvePart2(input);
 
-        result.Should().Be(999);
+        result.Should().Be(6);
     }
 }
